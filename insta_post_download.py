@@ -50,7 +50,7 @@ def get_all_post(username,driver,post_li_link):
     for lk in post_li_link:
         link = insta_link + lk
         driver.get(link)
-        time.sleep(1.5)
+        time.sleep(1)
         soup = BeautifulSoup(driver.page_source,'html.parser')
         images = soup.findAll('img')
         videos = soup.findAll('video')
