@@ -31,7 +31,7 @@ def get_all_link(username):
     post_number = int(base.find('span',class_ = 'g47SY').get_text())
     print(f'Number of Post {post_number}')
     post_li_link = []
-    for i in range(int(post_number/6)):
+    for i in range(int(post_number/10)):
         driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
         soup = BeautifulSoup(driver.page_source,'html.parser')
         posts = soup.findAll('a')
